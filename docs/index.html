@@ -16,7 +16,7 @@
   <div class="light-grid" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="VEZKIO Studio beranda"><span class="mark">V<span>✦</span></span><span>VEZKIO<small>STUDIO</small></span></a>
-    <nav aria-label="Navigasi utama"><a href="#features">Fitur</a><a href="#workflow">Workflow</a><a href="#faq">FAQ</a><a class="nav-github" href="https://github.com/Yudhachenn/vezkio-studio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+    <nav aria-label="Navigasi utama"><a href="#preview">Preview</a><a href="#features">Fitur</a><a href="#feedback">Feedback</a><a href="#faq">FAQ</a><a class="nav-github" href="https://github.com/Yudhachenn/vezkio-studio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
     <a class="nav-download" href="#download">Get VEZKIO <span>↗</span></a>
   </header>
   <main id="top">
@@ -25,7 +25,7 @@
         <div class="eyebrow"><span class="green-dot"></span> OFFLINE-FIRST CREATIVE STUDIO <span class="eyebrow-line"></span> FOR WINDOWS</div>
         <h1>Make space<br/>for your <em>next<br/>big idea.</em></h1>
         <p class="hero-sub">Desain, animasi, dan bereksperimen dalam satu workspace modern. Dengan VEZKIO, ide bukan cuma terlihat bagus—tapi siap diuji sebelum dipublikasikan.</p>
-        <div class="hero-actions"><a class="primary" href="#download">Explore the download <span>↗</span></a><a class="secondary" href="#features">Discover what’s inside <span>↓</span></a></div>
+        <div class="hero-actions"><a class="primary" href="#download">Explore the download <span>↗</span></a><a class="secondary" href="#preview">Lihat preview aplikasi <span>↓</span></a></div>
         <div class="mini-stats"><span><b>01</b> Design + Motion</span><span><b>02</b> Local-first</span><span><b>03</b> Quality tools</span></div>
       </div>
       <div class="hero-visual" aria-label="Pratinjau antarmuka VEZKIO Studio bergaya Aurora">
@@ -44,6 +44,51 @@
       </div>
     </section>
     <section class="strip"><div class="wrap"><span>ONE CREATIVE WORKSPACE</span><strong>DESIGN <span>✦</span> ANIMATE <span>✦</span> EXPERIMENT <span>✦</span> EXPORT</strong></div></section>
+
+    <!-- Interactive product tour: illustrative mockups until owner supplies real app screenshots. -->
+    <section id="preview" class="tour-section wrap" aria-labelledby="tour-heading">
+      <div class="tour-heading">
+        <div><span class="kicker">A CLOSER LOOK</span><h2 id="tour-heading">Inside <em>VEZKIO.</em></h2></div>
+        <p>Kenali workspace sebelum download. Pilih panel di bawah untuk melihat bagaimana alat kreatif VEZKIO bekerja.</p>
+      </div>
+      <div class="tour-shell">
+        <div class="tour-topline"><div class="window-lights" aria-hidden="true"><i></i><i></i><i></i></div><span>VEZKIO / PRODUCT TOUR</span><span class="tour-top-badge">AURORA 1.2</span></div>
+        <div class="tour-tabs" role="tablist" aria-label="Pratinjau fitur VEZKIO">
+          <button class="tour-tab" role="tab" id="tab-editor" aria-controls="panel-editor" aria-selected="true" tabindex="0" data-tab="editor"><span>01</span> Studio Editor</button>
+          <button class="tour-tab" role="tab" id="tab-reality" aria-controls="panel-reality" aria-selected="false" tabindex="-1" data-tab="reality"><span>02</span> Reality Lab</button>
+          <button class="tour-tab" role="tab" id="tab-mutation" aria-controls="panel-mutation" aria-selected="false" tabindex="-1" data-tab="mutation"><span>03</span> Mutation Engine</button>
+          <button class="tour-tab" role="tab" id="tab-export" aria-controls="panel-export" aria-selected="false" tabindex="-1" data-tab="export"><span>04</span> Export Guardian</button>
+        </div>
+        <div class="tour-views">
+          <section class="tour-panel is-active" id="panel-editor" role="tabpanel" tabindex="0" aria-labelledby="tab-editor">
+            <div class="tour-visual editor-shot">
+              <div class="scene-titlebar"><span>◈ &nbsp; Aurora Studio</span><span>Draft / Poster design</span><span class="scene-save">✓ Auto-saved</span></div>
+              <div class="scene-editor-body">
+                <div class="scene-side"><small>ELEMENTS</small><div class="scene-input">⌕ &nbsp; Search elements</div><div class="scene-block"></div><div class="scene-block twin"></div><small>LAYERS</small><div class="scene-layer">▧ &nbsp; Headline</div><div class="scene-layer">◉ &nbsp; Shape / Orbit</div><div class="scene-layer">▣ &nbsp; Background</div></div>
+                <div class="scene-canvas"><div class="scene-canvas-toolbar">▤ &nbsp; Design / 1080 × 1080 <span>100% ◉</span></div><div class="scene-poster"><span class="scene-poster-top">VEZKIO / CREATIVE WEEK</span><span class="scene-poster-glow"></span><span class="scene-poster-ring"></span><strong>MAKE<br>IT <i>BOLD</i><span>.</span></strong><span class="scene-poster-bottom">UNLIMITED CREATIVE SPACE &nbsp; ↗</span></div><div class="scene-footnote">Page 1 of 1 <span>− &nbsp; 76% &nbsp; +</span></div></div>
+                <div class="scene-inspector"><small>PROPERTIES</small><span class="scene-prop">Position <b>120 &nbsp; 84</b></span><span class="scene-prop">Size <b>620 × 780</b></span><span class="scene-prop">Opacity <b>100%</b></span><div class="scene-meter"><i></i></div><small>QUICK TOOLS</small><div class="scene-tool">✦ &nbsp; Creative Suite</div><div class="scene-tool">◈ &nbsp; Motion DNA</div></div>
+              </div>
+            </div>
+            <div class="tour-copy"><span class="tour-counter">01 / DESIGN WORKSPACE</span><h3>Semua ide, satu kanvas.</h3><p>Susun layer, teks, bentuk, dan warna dalam satu tempat. Eksplorasi konsep tanpa meninggalkan alur desain.</p><span class="tour-chip">Canvas • Layers • Properties</span></div>
+          </section>
+          <section class="tour-panel" id="panel-reality" role="tabpanel" tabindex="0" aria-labelledby="tab-reality" hidden>
+            <div class="tour-visual reality-shot">
+              <div class="reality-dashboard"><div class="scene-titlebar">◈ &nbsp; REALITY LAB <span>Safe-zone inspection</span></div><div class="reality-layout"><div class="reality-settings"><small>PLATFORM PREVIEW</small><div class="reality-option selected">◉ &nbsp; Shorts / Reels</div><div class="reality-option">○ &nbsp; 9:16 / Portrait</div><small>CHECK RESULTS</small><div class="reality-result">✓ &nbsp; Canvas ratio</div><div class="reality-result warning">! &nbsp; Caption safe zone</div><div class="reality-result">✓ &nbsp; Contrast overview</div></div><div class="phone-frame"><div class="phone-notch"></div><div class="phone-design"><span>CREATE</span><strong>WITHOUT<br><em>LIMITS.</em></strong><span>DESIGN IT YOUR WAY</span></div><div class="safe-outline"></div><div class="phone-ui"><span>♡<br>◯<br>↗</span><p>@VEZKIO &nbsp; ✦<br>Make space for ideas...</p></div></div><div class="reality-callout">⚠ Overlay bisa menutupi teks di bagian bawah</div></div></div>
+            </div>
+            <div class="tour-copy"><span class="tour-counter">02 / PLATFORM PREVIEW</span><h3>Lihat desain di dunia nyata.</h3><p>Periksa kemungkinan judul atau elemen penting tertutup UI platform. Area aman merupakan perkiraan, bukan jaminan platform.</p><span class="tour-chip">Shorts • Reels • TikTok</span></div>
+          </section>
+          <section class="tour-panel" id="panel-mutation" role="tabpanel" tabindex="0" aria-labelledby="tab-mutation" hidden>
+            <div class="tour-visual mutation-shot"><div class="scene-titlebar">◈ &nbsp; MUTATION ENGINE <span>Six variations / one idea</span></div><div class="mutation-layout"><div class="mutation-head">Explore new directions <span>✦ Generate 6 layouts</span></div><div class="mutation-grid"><div class="mut-card" data-n="01"><strong>CREATE<br>NEW<br>WORLDS</strong><i></i></div><div class="mut-card" data-n="02"><i></i><strong>CREATE<br>NEW<br>WORLDS</strong></div><div class="mut-card" data-n="03"><strong>CREATE<br>NEW<br>WORLDS</strong><i></i></div><div class="mut-card" data-n="04"><i></i><strong>CREATE<br>NEW<br>WORLDS</strong></div><div class="mut-card" data-n="05"><strong>CREATE<br>NEW<br>WORLDS</strong><i></i></div><div class="mut-card" data-n="06"><i></i><strong>CREATE<br>NEW<br>WORLDS</strong></div></div></div></div>
+            <div class="tour-copy"><span class="tour-counter">03 / VISUAL EXPLORATION</span><h3>Satu ide, enam arah baru.</h3><p>Temukan alternatif komposisi dengan cepat, sementara layer terkunci tetap dijaga sesuai aturan desainmu.</p><span class="tour-chip">Variations • Locked layers • Explore</span></div>
+          </section>
+          <section class="tour-panel" id="panel-export" role="tabpanel" tabindex="0" aria-labelledby="tab-export" hidden>
+            <div class="tour-visual export-shot"><div class="scene-titlebar">◈ &nbsp; EXPORT GUARDIAN <span>Pre-export quality checks</span></div><div class="export-layout"><div class="export-art"><div class="export-poster"><span>YOUR NEXT</span><strong>GREAT<br>IDEA<span>.</span></strong><small>MADE WITH VEZKIO STUDIO</small></div></div><div class="export-report"><small>EXPORT READINESS</small><h4>Almost ready <span>↗</span></h4><div class="export-progress"><i></i></div><p>Review before you export.</p><div class="export-check">✓ <span>Canvas dimensions</span></div><div class="export-check">✓ <span>Layer visibility</span></div><div class="export-check warning">! <span>Text outside safe margin</span></div><div class="export-action">Export as PNG &nbsp; ↗</div></div></div></div>
+            <div class="tour-copy"><span class="tour-counter">04 / QUALITY CHECK</span><h3>Ekspor dengan lebih yakin.</h3><p>Periksa potensi masalah komposisi dan clipping sebelum hasil desain dibagikan.</p><span class="tour-chip">PNG • SVG • Quality checks</span></div>
+          </section>
+        </div>
+      </div>
+      <p class="tour-disclaimer">* Preview di atas adalah ilustrasi interaktif yang mewakili fitur VEZKIO, bukan screenshot langsung dari aplikasi. Screenshot asli dapat ditambahkan pada pembaruan berikutnya.</p>
+    </section>
     <section id="features" class="features wrap"><div class="section-top"><div><span class="kicker">BUILT TO THINK WITH YOU</span><h2>More than an editor.<br/><em>A creative partner.</em></h2></div><p>Alat eksperimental untuk menguji ide, menjaga konsistensi, dan membuat versi desain tanpa mengganti pesan utama.</p></div>
       <div class="feature-grid">
         <article class="feature feature-wide"><span class="feature-icon purple">◈</span><small>01 / VISUAL EXPLORATION</small><h3>Mutation Engine</h3><p>Jelajahi enam alternatif komposisi secara deterministik, sambil menjaga layer yang kamu kunci.</p><div class="variation-bar"><div class="var one">A</div><div class="var two">B</div><div class="var three">C</div><div class="var four">D</div><div class="var five">E</div></div></article>
@@ -57,7 +102,24 @@
     </section>
     <section id="workflow" class="workflow"><div class="wrap workflow-inner"><div><span class="kicker">FROM FIRST DRAFT TO FINAL EXPORT</span><h2>Your flow.<br/><em>Uninterrupted.</em></h2><p>Buat desain di canvas, eksplorasi variasi visual, uji dengan Reality Lab, lalu jalankan Export Guardian sebelum ekspor.</p></div><div class="steps"><div><b>01</b><span><strong>Create</strong><small>Canvas, text, photos, layers</small></span></div><div><b>02</b><span><strong>Explore</strong><small>Design DNA, Mutation Engine, Motion DNA</small></span></div><div><b>03</b><span><strong>Validate</strong><small>Reality Lab, Repair, Collision Radar</small></span></div><div><b>04</b><span><strong>Export</strong><small>PNG, SVG, project format</small></span></div></div></div></section>
     <section id="download" class="download-section wrap"><div class="download-glow"></div><span class="kicker">CREATE BEYOND THE CANVAS</span><h2>Ready when <em>you are.</em></h2><p>Versi Windows dikemas dengan installer NSIS. Status download otomatis mengikuti GitHub Releases resmi—tanpa tautan palsu.</p><div class="download-actions"><a id="download-button" class="primary download-disabled" href="https://github.com/Yudhachenn/vezkio-studio/releases" aria-disabled="true"><span>↓</span> Belum ada rilis publik</a><a class="secondary" id="release-page" href="https://github.com/Yudhachenn/vezkio-studio/releases" target="_blank" rel="noopener noreferrer">View releases ↗</a></div><div class="release-meta" id="release-meta" role="status">Mengecek rilis yang tersedia…</div><div class="requirements"><span>Windows 10/11 • x64</span><span>Desktop offline-first</span><span>Installer via GitHub Releases</span></div></section>
-    <section id="faq" class="faq wrap"><span class="kicker">GOOD TO KNOW</span><h2>Frequently asked <em>questions.</em></h2><details><summary>Apakah VEZKIO harus online?</summary><p>Editor desktop dirancang offline-first. Beberapa fitur sistem seperti mengunduh installer atau memperbarui dependensi selama build membutuhkan internet.</p></details><details><summary>Apakah ini sudah stabil seperti Canva atau Figma?</summary><p>Belum. VEZKIO masih dalam tahap release candidate. Hasil rendering, file besar, dan performa harus terus diuji sebelum dinyatakan stabil.</p></details><details><summary>Apakah proyek desain saya diunggah ke cloud?</summary><p>Versi ini memakai penyimpanan proyek lokal/IndexedDB. Tidak ada sinkronisasi cloud bawaan; selalu simpan backup file .vezkio.</p></details><details><summary>Mengapa tombol Download belum aktif?</summary><p>Tombol akan aktif secara otomatis ketika ada GitHub Release publik yang memiliki file installer Windows. Draft release belum dianggap tersedia untuk pengguna.</p></details></section>
+
+    <section id="feedback" class="feedback-section" aria-labelledby="feedback-heading"><div class="wrap feedback-inner">
+      <div class="feedback-intro"><span class="kicker">BUILD VEZKIO TOGETHER</span><h2 id="feedback-heading">Your feedback.<br><em>Our next update.</em></h2><p>Ada bug? UI terasa membingungkan? Atau punya ide fitur yang belum ada? Ceritakan di sini agar pengembangan VEZKIO benar-benar mengikuti kebutuhan pengguna.</p>
+      <div class="feedback-benefits"><div><span>01</span><strong>Laporkan kendala</strong><small>Bantu kami menemukan bagian yang perlu diperbaiki.</small></div><div><span>02</span><strong>Bagikan ide</strong><small>Usulkan fitur yang membuat VEZKIO lebih berguna.</small></div><div><span>03</span><strong>Ikuti perkembangannya</strong><small>Feedback dibuka sebagai GitHub Issue dan bisa dilacak publik.</small></div></div>
+      </div>
+      <div class="feedback-card"><div class="feedback-card-head"><div><span class="feedback-live-dot"></span><strong>Tell us what you think</strong></div><span class="feedback-version">VEZKIO 1.2</span></div>
+        <form id="feedback-form" novalidate>
+          <fieldset class="feedback-types"><legend>Apa yang ingin kamu sampaikan?</legend><div class="feedback-choices"><label><input type="radio" name="kind" value="Bug" checked><span>🐛 &nbsp; Bug</span></label><label><input type="radio" name="kind" value="Ide fitur"><span>✦ &nbsp; Ide fitur</span></label><label><input type="radio" name="kind" value="Saran UI/UX"><span>◈ &nbsp; UI / UX</span></label><label><input type="radio" name="kind" value="Lainnya"><span>☰ &nbsp; Lainnya</span></label></div></fieldset>
+          <label class="feedback-label" for="feedback-title">Judul singkat <span>Wajib</span></label><input id="feedback-title" name="title" type="text" minlength="8" maxlength="100" required placeholder="Contoh: Teks berubah posisi saat export" autocomplete="off">
+          <label class="feedback-label" for="feedback-details">Ceritakan lebih lengkap <span>Wajib</span></label><textarea id="feedback-details" name="details" minlength="20" maxlength="800" required rows="5" placeholder="Apa yang kamu lakukan, apa yang terjadi, dan apa yang kamu harapkan?"></textarea>
+          <div class="feedback-foot"><span id="feedback-count">0 / 800</span><label class="feedback-check"><input type="checkbox" id="feedback-public" required><span>Saya paham laporan akan tampil <b>publik di GitHub</b> dan tidak akan memasukkan informasi pribadi/rahasia.</span></label></div>
+          <button class="feedback-submit" type="submit">Lanjut kirim via GitHub <span>↗</span></button>
+          <p class="feedback-help" id="feedback-help" role="status">Gratis. Memerlukan login GitHub; kamu perlu menekan “Submit new issue” pada halaman berikutnya. Tidak ada data yang otomatis terkirim dari website ini.</p>
+        </form>
+        <div class="feedback-alternative"><span>Punya pertanyaan atau ingin melihat laporan lain?</span><a href="https://github.com/Yudhachenn/vezkio-studio/issues" target="_blank" rel="noopener noreferrer">Lihat semua feedback ↗</a></div>
+      </div>
+    </div></section>
+    <section id="faq" class="faq wrap"><span class="kicker">GOOD TO KNOW</span><h2>Frequently asked <em>questions.</em></h2><details><summary>Apakah VEZKIO harus online?</summary><p>Editor desktop dirancang offline-first. Beberapa fitur sistem seperti mengunduh installer atau memperbarui dependensi selama build membutuhkan internet.</p></details><details><summary>Apakah ini sudah stabil seperti Canva atau Figma?</summary><p>Belum. VEZKIO masih dalam tahap release candidate. Hasil rendering, file besar, dan performa harus terus diuji sebelum dinyatakan stabil.</p></details><details><summary>Apakah proyek desain saya diunggah ke cloud?</summary><p>Versi ini memakai penyimpanan proyek lokal/IndexedDB. Tidak ada sinkronisasi cloud bawaan; selalu simpan backup file .vezkio.</p></details><details><summary>Mengapa tombol Download belum aktif?</summary><p>Tombol akan aktif secara otomatis ketika ada GitHub Release publik yang memiliki file installer Windows. Draft release belum dianggap tersedia untuk pengguna.</p></details><details><summary>Bagaimana cara mengirim feedback?</summary><p>Isi form di halaman ini. Kamu akan diarahkan ke GitHub untuk meninjau dan mengirim laporan; akun GitHub diperlukan. Laporan dan diskusi bersifat publik.</p></details></section>
   </main>
-  <footer><div class="wrap footer-inner"><a class="brand" href="#top"><span class="mark">V<span>✦</span></span><span>VEZKIO<small>STUDIO</small></span></a><p>Make space for what’s next. © <span id="year">2026</span> VEZKIO Studio.</p><a href="https://github.com/Yudhachenn/vezkio-studio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+  <footer><div class="wrap footer-inner"><a class="brand" href="#top"><span class="mark">V<span>✦</span></span><span>VEZKIO<small>STUDIO</small></span></a><p>Make space for what’s next. © <span id="year">2026</span> VEZKIO Studio.</p><a href="#feedback">Feedback ↗</a><a href="https://github.com/Yudhachenn/vezkio-studio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
 </body></html>
