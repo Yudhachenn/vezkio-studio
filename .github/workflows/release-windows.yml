@@ -1,0 +1,81 @@
+name: Build Windows installer (draft release)
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag for draft prerelease (example: v1.2.0-rc.1)'
+        required: true
+        default: 'v1.2.0-rc.1'
+      publish_draft:
+        description: 'Create a private-to-maintainers draft GitHub release after build'
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      - name: Install npm dependencies
+        shell: pwsh
+        run: |
+          if (Test-Path package-lock.json) { npm ci --no-audit --no-fund }
+          else { npm install --no-audit --no-fund }
+      - name: Verify TypeScript
+        run: npm run check
+      - name: Test creative engine
+        run: npm run test:creative
+      - name: Build frontend
+        run: npm run build
+      - name: Build Tauri NSIS installer
+        run: npm run tauri build -- --bundles nsis
+      - name: Verify installer and calculate SHA256
+        id: installer
+        shell: pwsh
+        run: |
+          $files = @(Get-ChildItem 'src-tauri/target/release/bundle/nsis/*-setup.exe' -ErrorAction SilentlyContinue)
+          if ($files.Count -lt 1) { throw 'Installer not found in NSIS bundle directory' }
+          $dir = 'src-tauri/target/release/bundle/nsis'
+          $checksums = @()
+          foreach ($f in $files) {
+            $hash = (Get-FileHash -Algorithm SHA256 $f.FullName).Hash.ToLowerInvariant()
+            $checksums += "$hash  $($f.Name)"
+          }
+          $checksums | Set-Content -Encoding utf8 "$dir/SHA256SUMS.txt"
+          Write-Host "Installer(s): $($files.Name -join ', ')"
+      - name: Upload testable installer artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: VEZKIO-Windows-NSIS-candidate
+          path: |
+            src-tauri/target/release/bundle/nsis/*-setup.exe
+            src-tauri/target/release/bundle/nsis/SHA256SUMS.txt
+          if-no-files-found: error
+      - name: Create draft prerelease (never published automatically)
+        if: ${{ inputs.publish_draft }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag }}
+          target_commitish: main
+          name: VEZKIO Studio ${{ inputs.tag }}
+          body_path: RELEASE_NOTES.md
+          draft: true
+          prerelease: true
+          files: |
+            src-tauri/target/release/bundle/nsis/*-setup.exe
+            src-tauri/target/release/bundle/nsis/SHA256SUMS.txt
+          fail_on_unmatched_files: true

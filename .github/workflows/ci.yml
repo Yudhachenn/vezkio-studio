@@ -1,0 +1,27 @@
+name: Verify VEZKIO
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  types-and-engine:
+    name: TypeScript, creative engine and web build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        shell: pwsh
+        run: |
+          if (Test-Path package-lock.json) { npm ci --no-audit --no-fund }
+          else { npm install --no-audit --no-fund }
+      - run: npm run check
+      - run: npm run test:creative
+      - run: npm run build

@@ -1,0 +1,7 @@
+{
+  "$schema":"../gen/schemas/desktop-schema.json",
+  "identifier":"default",
+  "description":"Allow local file open/save only after user-selected dialogs",
+  "windows":["main"],
+  "permissions":["core:default", "dialog:allow-save", "fs:allow-write-file"]
+}

@@ -1,0 +1,2 @@
+# VEZKIO download landing page
+Static HTML/CSS/JS; no build dependencies. Deploy `docs/` to GitHub Pages through `.github/workflows/pages.yml`. Download CTA is enabled only if public latest stable GitHub Release has an NSIS `*-setup.exe` asset. Currently configured for `Yudhachenn/vezkio-studio`; adjust `docs/app.js` + links in `docs/index.html` if repo is under another owner. No install binary is included here.
